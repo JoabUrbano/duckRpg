@@ -1,12 +1,14 @@
 .navbar{
-    background-color: black;
+    background-color: #222;
     color: #eee;
     padding: 1.5em;
+    min-block-size: 1.4em;
 }
 
 .navbar ui{
     list-style: none;
     display: flex;
+    list-style: none;
 }
 
 .navbar ui li{

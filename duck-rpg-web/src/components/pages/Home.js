@@ -3,7 +3,7 @@ import styles from './Home.module.css'
 function Home() {
     return(
         <div className={styles.home}>
-            Home
+            <h1>DuckRPG</h1>
         </div>
     )
 }

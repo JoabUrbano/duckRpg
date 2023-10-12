@@ -1,16 +1,22 @@
 .navbar{
     background-color: #222;
     color: #eee;
-    padding: 1.5em;
+    padding: 1em;
     min-block-size: 1.4em;
+    display: flex;
 }
 
 .navbar ui{
     list-style: none;
     display: flex;
-    list-style: none;
+    align-itens: center;
 }
 
 .navbar ui li{
     padding-right: 2em;
+    text-decoration: none;
+}
+
+.navbar img{
+    max-width:63px;
 }

@@ -1,7 +1,7 @@
 function Sobre() {
     return(
         <div>
-            Sobre
+            <p>Aplicação dedicada a auxiliar mesas de RPG.</p>
         </div>
     )
 }

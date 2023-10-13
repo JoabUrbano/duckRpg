@@ -1,9 +1,7 @@
-import styles from './Footer.module.css'
-
 function Footer() {
     return(
-        <div className={styles.footer}>
-            DuckRPG by <a href="https://github.com/JoabUrbano" target="_black"><span>Joab</span></a>&copy; 2023
+        <div className=' bg-cor-barra p-4 text-slate-100 flex p-5'>
+            DuckRPG by <a href="https://github.com/JoabUrbano" target="_black"><span className="text-orange-400 p-1">Joab</span></a>&copy; 2023
         </div>
     )
 }

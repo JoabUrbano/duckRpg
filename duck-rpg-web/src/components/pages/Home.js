@@ -1,9 +1,7 @@
-import styles from './Home.module.css'
-
 function Home() {
     return(
-        <div className={styles.home}>
-            <h1>DuckRPG</h1>
+        <div className='min-h-screen bg-yellow-100 p-4'>
+            <h1 className="text-xl">DuckRPG</h1>
         </div>
     )
 }

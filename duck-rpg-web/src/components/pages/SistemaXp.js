@@ -1,6 +1,6 @@
 function SistemaXp() {
     return(
-        <div>
+        <div className='min-h-screen bg-yellow-100 p-4'>
             SistemaXp
         </div>
     )

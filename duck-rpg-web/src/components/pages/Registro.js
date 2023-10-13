@@ -1,9 +1,9 @@
-function SistemaXp() {
+function Registro() {
     return(
         <div className='min-h-screen bg-cor-bg p-4'>
-            SistemaXp
+            Registro
         </div>
     )
 }
 
-export default SistemaXp;
+export default Registro;

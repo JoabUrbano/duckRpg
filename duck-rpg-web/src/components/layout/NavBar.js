@@ -11,6 +11,8 @@ function NavBar() {
                 <li className="p-3 hover:text-orange-400 text-xl"><Link to="/buscarmagias">Buscar Magias</Link></li>
                 <li className="p-3 hover:text-orange-400 text-xl"><Link to="/sistemaxp">Sistema de XP</Link></li>
                 <li className="p-3 hover:text-orange-400 text-xl"><Link to="/sobre">Sobre</Link></li>
+                <li className="p-3 hover:text-orange-400 text-xl"><Link to="/registro">Registre-se</Link></li>
+                <li className="p-3 hover:text-orange-400 text-xl"><Link to="/login">Login</Link></li>
             </ui>
         </div>
     )

@@ -7,6 +7,8 @@ import NavBar from './components/layout/NavBar.js';
 import Footer from './components/layout/Footer.js';
 import BuscarMagias from './components/pages/BuscarMagias.js';
 import SistemaXp from './components/pages/SistemaXp.js';
+import Registro from './components/pages/Registro.js';
+import Login from './components/pages/Login.js';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/buscarmagias" element={<BuscarMagias />} />
         <Route path="/sistemaxp" element={<SistemaXp />} />
         <Route path="/sobre" element={<Sobre />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path ="/login" element={<Login />} />
       </Routes>
 
       <Footer />

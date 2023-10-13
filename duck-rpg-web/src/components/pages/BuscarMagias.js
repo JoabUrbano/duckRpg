@@ -1,6 +1,6 @@
 function BuscarMagias() {
     return(
-        <div className='min-h-screen bg-yellow-100 p-4'>
+        <div className='min-h-screen bg-cor-bg p-4'>
             BuscarMagias
         </div>
     )

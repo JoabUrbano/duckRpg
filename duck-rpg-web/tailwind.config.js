@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-         'cor-barra':'#222',
+         'cor-barra': '#222',
+         'cor-barra-clara': '#333',
+         'cor-bg': '#eee',
         },
     },
   },

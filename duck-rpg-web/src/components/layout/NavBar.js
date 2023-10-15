@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
 import imageHome from '../../img/kawaii_duck_png_by_milosii_df87clj-pre.png'
 

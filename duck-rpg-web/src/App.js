@@ -9,6 +9,7 @@ import BuscarMagias from './components/pages/BuscarMagias.js';
 import SistemaXp from './components/pages/SistemaXp.js';
 import Registro from './components/pages/Registro.js';
 import Login from './components/pages/Login.js';
+import ConsultarMagia from './components/ConsultsDedApi/ConsultarMagia.js';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/buscarmagias" element={<BuscarMagias />} />
+        <Route path="/buscarmagias/magia/:spellSelected" element={<ConsultarMagia />} />
+
         <Route path="/sistemaxp" element={<SistemaXp />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/registro" element={<Registro />} />

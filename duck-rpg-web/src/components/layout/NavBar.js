@@ -12,7 +12,7 @@ function NavBar() {
   };
 
   return (
-    <div className="bg-cor-barra p-4 text-white flex space-x-5 items-center">
+    <div className="bg-cor-barra p-4 text-white flex space-x-5 ">
       
       <Link className='min-h-16' to="/">
         <div className='h-16'>

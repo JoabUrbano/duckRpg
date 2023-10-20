@@ -5,7 +5,7 @@ import Footer from './components/layout/Footer.js';
 import Home from './components/pages/Home.js'
 import Sobre from './components/pages/Sobre.js'
 import BuscarMagias from './components/pages/BuscarMagias.js';
-import ConsultarMagia from './components/ConsultsDedApi/ConsultarMagia.js';
+import ConsultarMagia from './components/pages/ConsultarMagia.js';
 import BuscarClasses from './components/pages/BuscarClasses.js';
 import SistemaXp from './components/pages/SistemaXp.js';
 import Registro from './components/pages/Registro.js';

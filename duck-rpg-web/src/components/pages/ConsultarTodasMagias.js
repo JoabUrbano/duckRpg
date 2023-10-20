@@ -2,21 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Input from '../forms/Input.js';
 import Button from '../forms/Button.js'
+import Loading from '../layout/Loading.js';
 
 function ConsultarTodasMagias() {
 
     const navigate = useNavigate();
     const substituteCharacter = "-";
 
-    const [spells, setSpells] = useState(null);
-
-    const [name, setName] = useState("");
+    // eslint-disable-next-line
     const [data, setData] = useState(null);
+    const [spells, setSpells] = useState(null);
+    const [name, setName] = useState("");
+    const [removeLoading, setRevomeLoading] = useState(false);
 
     useEffect(() => {
         fetch(`https://www.dnd5eapi.co/api/spells`)
           .then(response => response.json())
-          .then(spells => setSpells(spells))
+          .then(spells => {
+            setSpells(spells);
+            setRevomeLoading(true);
+          })
           .catch(error => console.log(error))
     }, []);
 
@@ -65,6 +70,7 @@ function ConsultarTodasMagias() {
 
                             </li>
                         ))}
+                {!removeLoading && <Loading />}
             </ul>
         </div>
     )

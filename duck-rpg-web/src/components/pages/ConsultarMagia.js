@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Loading from '../layout/Loading';
 
 function ConsultarMagia() {
 
     const { spellSelected } = useParams();
     const [spell, setSpell] = useState(null);
+    const [removeLoading, setRemoveLoading] = useState(false);
 
     useEffect(() => {
         fetch(`https://www.dnd5eapi.co/api/spells/${spellSelected}`)
           .then(response => response.json())
-          .then(spell => setSpell(spell))
+          .then(spell => {
+            setSpell(spell);
+            setRemoveLoading(true);
+          })
           .catch(error => console.error(error));
           // eslint-disable-next-line
     }, []);
@@ -30,6 +35,7 @@ function ConsultarMagia() {
                     <li className='text-lg pl-1'>{spell.higher_level}</li>
                 </ul>
             )}
+            {!removeLoading && <Loading />}
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import ConsultarTodasMagias from "../ConsultsDedApi/ConsultarTodasMagias.js";
+import ConsultarTodasMagias from "./ConsultarTodasMagias";
 
 function BuscarMagias() {
 

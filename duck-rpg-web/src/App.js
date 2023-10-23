@@ -10,6 +10,7 @@ import BuscarClasses from './components/pages/BuscarClasses.js';
 import SistemaXp from './components/pages/SistemaXp.js';
 import Registro from './components/pages/Registro.js';
 import Login from './components/pages/Login.js';
+import ConsultarClasses from './components/pages/ConsultarClasses';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/buscarmagias/magia/:spellSelected" element={<ConsultarMagia />} />
 
         <Route path="/buscarclasses" element={<BuscarClasses />} />
+        <Route path="buscarclasse/:classSelected" element={<ConsultarClasses />} />
+        
         <Route path="/sistemaxp" element={<SistemaXp />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/registro" element={<Registro />} />

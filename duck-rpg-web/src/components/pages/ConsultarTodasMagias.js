@@ -63,9 +63,9 @@ function ConsultarTodasMagias() {
                         )}
                     </form>
             </div>
-            <ul className=''>
+            <ul>
                 {spells && spells.results.map((item) => (
-                            <li className='text-lg hover:text-orange-400 border-b-2 pb-1 border-red-200' key={item.name}>
+                            <li className='text-lg hover:text-orange-400 border-b-2 pb-1 border-orange-300' key={item.name}>
                                 <Link to ={`/buscarmagias/magia/${item.index}`} >{item.name}</Link>
 
                             </li>

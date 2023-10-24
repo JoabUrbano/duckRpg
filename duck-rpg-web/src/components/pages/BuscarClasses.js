@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { GiAbdominalArmor as Fighter, Gi3DHammer as Barbarian, GiAncientSword as Paladin,
+import { GiAbdominalArmor as Fighter, GiPointySword as Barbarian, GiAncientSword as Paladin,
     GiAnimalSkull as Warlock, GiAnkh as Cleric, GiAnthem as Bard, GiArcher as Ranger,
     GiBarbedNails as Druid, GiBeamsAura as Monk, GiBookmarklet as Wizard, GiBroadDagger as Rogue,
     GiFlamedLeaf as Sorcerer} from "react-icons/gi";

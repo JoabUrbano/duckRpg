@@ -4,8 +4,8 @@ import NavBar from './components/layout/NavBar.js';
 import Footer from './components/layout/Footer.js';
 import Home from './components/pages/Home.js'
 import Sobre from './components/pages/Sobre.js'
-import BuscarMagias from './components/pages/BuscarMagias.js';
-import ConsultarMagia from './components/pages/ConsultarMagia.js';
+import BuscarMagias from './components/pages/BuscarMagias/BuscarMagias.js';
+import ConsultarMagia from './components/pages/BuscarMagias/ConsultarMagia.js';
 import BuscarClasses from './components/pages/BuscarClasses/BuscarClasses';
 import ConsultarClasses from './components/pages/BuscarClasses/ConsultarClasses';
 import SistemaXp from './components/pages/SistemaXp.js';

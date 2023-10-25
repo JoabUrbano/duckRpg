@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Input from '../forms/Input.js';
-import Button from '../forms/Button.js'
-import Loading from '../layout/Loading.js';
+import Input from '../../forms/Input.js';
+import Button from '../../forms/Button.js'
+import Loading from '../../layout/Loading.js';
 
 function ConsultarTodasMagias() {
 
@@ -44,7 +44,7 @@ function ConsultarTodasMagias() {
     }
 
     return(
-        <div className='min-h-screen bg-cor-bg p-4'>
+        <div className='min-h-screen bg-cor-bg p-5'>
             <div className='pb-8'>
                     <form onSubmit={handleSubmit}>
                         <div className='flex'>
@@ -63,9 +63,10 @@ function ConsultarTodasMagias() {
                         )}
                     </form>
             </div>
+
             <ul>
                 {spells && spells.results.map((item) => (
-                            <li className='text-lg hover:text-orange-400 border-b-2 pb-1 border-orange-300' key={item.name}>
+                            <li className='text-xl hover:text-orange-400 border-b-2 pb-1 border-orange-300' key={item.name}>
                                 <Link to ={`/buscarmagias/magia/${item.index}`} >{item.name}</Link>
 
                             </li>

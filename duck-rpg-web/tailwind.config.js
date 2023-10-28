@@ -9,7 +9,7 @@ module.exports = {
       colors: {
          'cor-barra': '#222',
          'cor-barra-clara': '#333',
-         'cor-bg': '#eee',
+         'cor-bg': '#ddd',
         },
     },
   },

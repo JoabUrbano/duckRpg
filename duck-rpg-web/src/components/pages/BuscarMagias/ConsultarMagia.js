@@ -49,11 +49,15 @@ function ConsultarMagia() {
 
                     <li className='text-lg pl-1 pt-2 flex'>
                         <p className='font-bold pr-1'>Spell Lists:</p>
-                        {spell && spell.classes.map((spellClass) => {
-                            return(
-                                <>{spellClass.name}, </>
-                            )
-                        })}
+                        {spell && spell.classes.map((spellClass, index) => (
+                        <p className = "pr-1">
+                            {index === spell.classes.length - 1 ? (
+                            <span key={index}>{spellClass.name}.</span>
+                            ) : (
+                            <span key={index}>{spellClass.name}, </span>
+                            )}
+                        </p>
+                        ))}
                     </li>
 
                 </ul>

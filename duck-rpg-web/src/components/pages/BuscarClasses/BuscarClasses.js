@@ -4,7 +4,7 @@ import { GiAbdominalArmor as Fighter, GiPointySword as Barbarian, GiAncientSword
     GiBarbedNails as Druid, GiBeamsAura as Monk, GiBookmarklet as Wizard, GiBroadDagger as Rogue,
     GiFlamedLeaf as Sorcerer} from "react-icons/gi";
 
-function BuscarClasses() {
+export default function BuscarClasses() {
     return(
         <div className='min-h-screen bg-cor-bg p-4'>
             <ul className='text-2xl p-2 text-center'>
@@ -193,5 +193,3 @@ function BuscarClasses() {
         </div>
     )
 }
-
-export default BuscarClasses;

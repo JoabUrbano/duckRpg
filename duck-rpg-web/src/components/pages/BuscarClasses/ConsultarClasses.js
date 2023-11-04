@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Loading from '../../layout/Loading';
 import ConsultarTabelaClasses from './ConsultarTabelaClasses';
 
-function ConsultarClasses() {
+export default function ConsultarClasses() {
 
     const { classSelected } = useParams();
     const [ classRpg, setClassRpg ] = useState(null);
@@ -80,5 +80,3 @@ function ConsultarClasses() {
         </div>
     )
 }
-
-export default ConsultarClasses;

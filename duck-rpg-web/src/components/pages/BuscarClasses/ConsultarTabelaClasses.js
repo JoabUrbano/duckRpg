@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-function ConsultarTabelaClasses({classSelected}) {
+export default function ConsultarTabelaClasses({classSelected}) {
 
-    const [ featuresClass, setFeaturesClass ] = useState(null);
+    const [ featuresClass, setFeaturesClass ] = useState([0]);
     const [ removeLoading, setRemoveLoading ] = useState(false);
 
     useEffect(() => {
@@ -34,10 +34,7 @@ function ConsultarTabelaClasses({classSelected}) {
                         Features
                     </div>
 
-                    {!removeLoading ? (
-                         <></>
-                        ) : (
-                            featuresClass[0].spellcasting ? (
+                    {featuresClass[0] && featuresClass[0].spellcasting ? (
                             <>
                                 {featuresClass[0].spellcasting.cantrips_known && (
                                     <div className="w-1/12 bg-orange-400">
@@ -54,17 +51,17 @@ function ConsultarTabelaClasses({classSelected}) {
                                 {featuresClass[15].spellcasting.spell_slots_level_1 > 0 && (
                                     <div className="w-4/12 bg-orange-400">
                                         Slots<br/>
-                                        <div className='flex items-center justify-center'>
-                                            <p className='pr-4'>1st</p>
-                                            <p className='pr-4'>2st</p>
-                                            <p className='pr-4'>3st</p>
-                                            <p className='pr-4'>4st</p>
-                                            <p className='pr-4'>5st</p>
+                                        <div className='flex gap-5 items-center justify-center'>
+                                            <p>1st</p>
+                                            <p>2st</p>
+                                            <p>3st</p>
+                                            <p>4st</p>
+                                            <p>5st</p>
                                             {featuresClass[15].spellcasting.spell_slots_level_6 > 0 && (
                                                 <>
-                                                    <p className='pr-4'>6st</p>
-                                                    <p className='pr-4'>7st</p>
-                                                    <p className='pr-4'>8st</p>
+                                                    <p>6st</p>
+                                                    <p>7st</p>
+                                                    <p>8st</p>
                                                     <p>9st</p>
                                                 </>
                                             )}
@@ -78,9 +75,8 @@ function ConsultarTabelaClasses({classSelected}) {
                                     </div>
                                 )}
                             </>
-                            ) : (
-                                <></>
-                            )
+                        ) : (
+                            <></>
                         )}
                 </li>
 
@@ -98,11 +94,15 @@ function ConsultarTabelaClasses({classSelected}) {
                             </div>
 
                             <div className='w-3/12 bg-slate-300'>
-                                {features.features.map((feat) => {
-                                    return(
-                                        <>{feat.name}, </>
-                                    )
-                                })}
+                                {features && features.features.map((feature, index) => (
+                                <p className = "pr-1">
+                                    {index === features.features.length - 1 ? (
+                                    <span key={index}>{feature.name}</span>
+                                    ) : (
+                                    <span key={index}>{feature.name}, </span>
+                                    )}
+                                </p>
+                                ))}
                             </div>
                     
                             {features.spellcasting && (
@@ -120,41 +120,34 @@ function ConsultarTabelaClasses({classSelected}) {
                                     )}
 
                                     {featuresClass[15].spellcasting.spell_slots_level_1 > 0 && (
-                                        <div className="w-4/12 flex items-center justify-center bg-slate-300">
-                                            <p className='pr-8'>
+                                        <div className="w-4/12 flex gap-8 items-center justify-center bg-slate-300">
+                                            <p>
                                                 {features.spellcasting.spell_slots_level_1}
                                             </p>
-
-                                            <p className='pr-8'>
+                                            <p>
                                                 {features.spellcasting.spell_slots_level_2}
                                             </p>
-
-                                            <p className='pr-8'>
+                                            <p>
                                                 {features.spellcasting.spell_slots_level_3}
                                             </p>
-
-                                            <p className='pr-8'>
+                                            <p>
                                                 {features.spellcasting.spell_slots_level_4}
                                             </p>
-
-                                            <p className='pr-8'>
+                                            <p>
                                                 {features.spellcasting.spell_slots_level_5}
                                             </p>
 
                                             {featuresClass[15].spellcasting.spell_slots_level_6 > 0 && (
                                                 <>
-                                                    <p className='pr-8'>
+                                                    <p>
                                                         {features.spellcasting.spell_slots_level_6}
                                                     </p>
-
-                                                    <p className='pr-8'>
+                                                    <p>
                                                         {features.spellcasting.spell_slots_level_7}
                                                     </p>
-
-                                                    <p className='pr-8'>
+                                                    <p>
                                                         {features.spellcasting.spell_slots_level_8}
                                                     </p>
-
                                                     <p>
                                                         {features.spellcasting.spell_slots_level_9}
                                                     </p>
@@ -195,5 +188,3 @@ function ConsultarTabelaClasses({classSelected}) {
         </div>
     )
 }
-
-export default ConsultarTabelaClasses;

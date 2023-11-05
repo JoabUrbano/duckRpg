@@ -23,26 +23,25 @@ export default function ConsultarTabelaClasses({ classSelected }) {
     <div className="whitespace-normal overflow-x-auto min-w-full">
       <ul>
         <li className="flex text-center font-bold gap-4">
-          <div className="w-32 min-w-[8em]">Level</div>
+          <div className="min-w-[8em]">Level</div>
 
-          <div className="w-32 min-w-[8em]">Proficiency Bonus</div>
+          <div className="min-w-[8em]">Proficiency Bonus</div>
 
-          <div className="w-96 min-w-[24em]">Features</div>
+          <div className="min-w-[24em]">Features</div>
 
           {featuresClass[0] && featuresClass[0].spellcasting ? (
             <>
               {featuresClass[0].spellcasting.cantrips_known && (
-                <div className="w-32 min-w-[8em]">Cantrips Known</div>
+                <div className="min-w-[8em]">Cantrips Known</div>
               )}
 
               {featuresClass[0].spellcasting.spells_known && (
-                <div className="w-32 min-w-[8em]">Spells Known</div>
+                <div className="min-w-[8em]">Spells Known</div>
               )}
 
               {featuresClass[15].spellcasting.spell_slots_level_1 > 0 && (
-                <div className="w-96 min-w-[24em]">
+                <div className="min-w-[24em]">
                   Slots
-                  <br />
                   <div className="flex gap-4 items-center justify-center">
                     <p>1st</p>
                     <p>2st</p>
@@ -63,9 +62,8 @@ export default function ConsultarTabelaClasses({ classSelected }) {
 
               {featuresClass[0].spellcasting.spell_slots_level_1 > 0 &&
                 featuresClass[15].spellcasting.spell_slots_level_1 === 0 && (
-                  <div className="w-32 min-w-[8em]">
+                  <div className="min-w-[8em]">
                     Slot Level
-                    <br />
                   </div>
                 )}
             </>
@@ -78,14 +76,13 @@ export default function ConsultarTabelaClasses({ classSelected }) {
           featuresClass.map((features) => {
             return (
               <li className="flex text-center gap-4">
-                <div className="w-32 min-w-[8em]">
+                <div className="min-w-[8em]">
                   {features.level}
-                  <br />
                 </div>
 
-                <div className="w-32 min-w-[8em]">+{features.prof_bonus}</div>
+                <div className="min-w-[8em]">+{features.prof_bonus}</div>
 
-                <div className="w-96 min-w-[24em]">
+                <div className="min-w-[24em]">
                   {features &&
                     features.features.map((feature, index) => {
                     featuresClassList.push(feature.name)
@@ -104,19 +101,19 @@ export default function ConsultarTabelaClasses({ classSelected }) {
                 {features.spellcasting && (
                   <>
                     {featuresClass[0].spellcasting.cantrips_known && (
-                      <div className="w-32 min-w-[8em]">
+                      <div className="min-w-[8em]">
                         {features.spellcasting.cantrips_known}
                       </div>
                     )}
 
                     {featuresClass[0].spellcasting.spells_known && (
-                      <div className="w-32 min-w-[8em]">
+                      <div className="min-w-[8em]">
                         {features.spellcasting.spells_known}
                       </div>
                     )}
 
                     {featuresClass[15].spellcasting.spell_slots_level_1 > 0 && (
-                      <div className="w-96 min-w-[24em] flex gap-7 items-center justify-center">
+                      <div className="min-w-[24em] flex gap-7 items-center justify-center">
                         <p>{features.spellcasting.spell_slots_level_1}</p>
                         <p>{features.spellcasting.spell_slots_level_2}</p>
                         <p>{features.spellcasting.spell_slots_level_3}</p>
@@ -138,7 +135,7 @@ export default function ConsultarTabelaClasses({ classSelected }) {
                     {featuresClass[0].spellcasting.spell_slots_level_1 > 0 &&
                       featuresClass[15].spellcasting.spell_slots_level_1 ===
                         0 && (
-                        <div className="w-32 min-w-[8em] flex items-center justify-center">
+                        <div className="min-w-[8em] flex items-center justify-center">
                           <p>
                             {features.spellcasting.spell_slots_level_1 > 0 && (
                               <>

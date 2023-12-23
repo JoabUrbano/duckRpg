@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import imageHome from '../../img/kawaii_duck_png_by_milosii_df87clj-pre.png';
+import imageHome from '../../img/logo.png';
 import { GiAxeSwing, GiCometSpark } from "react-icons/gi";
 import { LiaAngleDownSolid } from "react-icons/lia";
 
-function NavBar() {
+export default function NavBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -76,5 +76,3 @@ function NavBar() {
     </div>
   );
 }
-
-export default NavBar;

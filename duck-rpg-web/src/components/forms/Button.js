@@ -1,7 +1,7 @@
-function Button({type, text, onClick, id}) {
+export default function Button({type, text, onClick, id, colorButtonText}) {
     return(
-        <div className="
-            text-gray-200
+        <div className={`
+            ${colorButtonText}
             text-xl
             text-center
             hover:text-orange-500
@@ -11,11 +11,9 @@ function Button({type, text, onClick, id}) {
             h-10
             w-24
             rounded-xl
-            p-1"
-            >
+            p-1`
+        }>
         <button type={type} onClick={onClick} id={id}>{text}</button>
         </div>
     )
 }
-
-export default Button;

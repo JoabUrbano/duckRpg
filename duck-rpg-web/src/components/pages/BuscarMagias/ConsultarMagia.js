@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import Loading from '../../layout/Loading';
+import BackArrow from "../../../img/back_arrow.webp"
 
-function ConsultarMagia() {
+export default function ConsultarMagia() {
 
     const { spellSelected } = useParams();
     const [spell, setSpell] = useState(null);
@@ -21,6 +23,7 @@ function ConsultarMagia() {
 
     return(
         <div className='min-h-screen bg-cor-bg p-4'>
+            <Link to="/buscarmagias"><img className='h-10' src={BackArrow} alt="BackArrow" /></Link>
             {spell && (
                 <ul>
                     <li className='text-orange-800 text-4xl pl-1'>{spell && spell.name}</li>
@@ -66,5 +69,3 @@ function ConsultarMagia() {
         </div>
     )
 }
-
-export default ConsultarMagia;

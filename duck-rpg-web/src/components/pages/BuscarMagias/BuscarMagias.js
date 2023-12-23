@@ -4,10 +4,21 @@ import Input from '../../forms/Input.js';
 import Button from '../../forms/Button.js'
 import Loading from '../../layout/Loading.js';
 
-function ConsultarTodasMagias() {
+export default function ConsultarTodasMagias() {
 
     const navigate = useNavigate();
     const substituteCharacter = "-";
+
+    const [colorButtonTextVar00, setColorButtonTextVar00] = useState("text-gray-200");
+    const [colorButtonTextVar01, setColorButtonTextVar01] = useState("text-gray-200");
+    const [colorButtonTextVar02, setColorButtonTextVar02] = useState("text-gray-200");
+    const [colorButtonTextVar03, setColorButtonTextVar03] = useState("text-gray-200");
+    const [colorButtonTextVar04, setColorButtonTextVar04] = useState("text-gray-200");
+    const [colorButtonTextVar05, setColorButtonTextVar05] = useState("text-gray-200");
+    const [colorButtonTextVar06, setColorButtonTextVar06] = useState("text-gray-200");
+    const [colorButtonTextVar07, setColorButtonTextVar07] = useState("text-gray-200");
+    const [colorButtonTextVar08, setColorButtonTextVar08] = useState("text-gray-200");
+    const [colorButtonTextVar09, setColorButtonTextVar09] = useState("text-gray-200");
 
     // eslint-disable-next-line
     const [data, setData] = useState(null);
@@ -45,6 +56,16 @@ function ConsultarTodasMagias() {
     }
 
     const handleFilterChange = (levelSpell) => {
+        setColorButtonTextVar00("text-gray-200");
+        setColorButtonTextVar01("text-gray-200");
+        setColorButtonTextVar02("text-gray-200");
+        setColorButtonTextVar03("text-gray-200");
+        setColorButtonTextVar04("text-gray-200");
+        setColorButtonTextVar05("text-gray-200");
+        setColorButtonTextVar06("text-gray-200");
+        setColorButtonTextVar07("text-gray-200");
+        setColorButtonTextVar08("text-gray-200");
+        setColorButtonTextVar09("text-gray-200");
         if(`?level=${levelSpell}` !== filter)
             setFilter(`?level=${levelSpell}`);
         else{
@@ -68,22 +89,62 @@ function ConsultarTodasMagias() {
                         </div>
 
                         {name && (
-                            <Button type="submit" text="Consult" />
+                            <Button type="submit" text="Consult" colorButtonText="text-gray-200" />
                         )}
                     </form>
             </div>
 
             <div className='flex items-center justify-center'>
-                <Button text="Level 0" onClick={() => handleFilterChange(0)} id = "level00" />
-                <Button text="Level 1" onClick={() => handleFilterChange(1)} id = "level01" />
-                <Button text="Level 2" onClick={() => handleFilterChange(2)} id = "level02" />
-                <Button text="Level 3" onClick={() => handleFilterChange(3)} id = "level03" />
-                <Button text="Level 4" onClick={() => handleFilterChange(4)} id = "level04" />
-                <Button text="Level 5" onClick={() => handleFilterChange(5)} id = "level05" />
-                <Button text="Level 6" onClick={() => handleFilterChange(6)} id = "level06" />
-                <Button text="Level 7" onClick={() => handleFilterChange(7)} id = "level07" />
-                <Button text="Level 8" onClick={() => handleFilterChange(8)} id = "level08" />
-                <Button text="Level 9" onClick={() => handleFilterChange(9)} id = "level09" />
+                <Button text="Level 0" onClick={() => {
+                    handleFilterChange(0);
+                    {colorButtonTextVar00 !== "text-orange-500"?(setColorButtonTextVar00("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level00" colorButtonText = {colorButtonTextVar00}
+                />
+                <Button text="Level 1" onClick={() => {
+                    handleFilterChange(1);
+                    {colorButtonTextVar01 !== "text-orange-500"?(setColorButtonTextVar01("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level01" colorButtonText = {colorButtonTextVar01}
+                />
+                <Button text="Level 2" onClick={() => {
+                    handleFilterChange(2);
+                    {colorButtonTextVar02 !== "text-orange-500"?(setColorButtonTextVar02("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level02" colorButtonText = {colorButtonTextVar02}
+                />
+                <Button text="Level 3" onClick={() => {
+                    handleFilterChange(3);
+                    {colorButtonTextVar03 !== "text-orange-500"?(setColorButtonTextVar03("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level03" colorButtonText = {colorButtonTextVar03}
+                />
+                <Button text="Level 4" onClick={() => {
+                    handleFilterChange(4);
+                    {colorButtonTextVar04 !== "text-orange-500"?(setColorButtonTextVar04("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level04" colorButtonText = {colorButtonTextVar04}
+                />
+                <Button text="Level 5" onClick={() => {
+                    handleFilterChange(5);
+                    {colorButtonTextVar05 !== "text-orange-500"?(setColorButtonTextVar05("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level05" colorButtonText = {colorButtonTextVar05}
+                />
+                <Button text="Level 6" onClick={() => {
+                    handleFilterChange(6);
+                    {colorButtonTextVar06 !== "text-orange-500"?(setColorButtonTextVar06("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level06" colorButtonText = {colorButtonTextVar06}
+                />
+                <Button text="Level 7" onClick={() => {
+                    handleFilterChange(7);
+                    {colorButtonTextVar07 !== "text-orange-500"?(setColorButtonTextVar07("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level07" colorButtonText = {colorButtonTextVar07}
+                />
+                <Button text="Level 8" onClick={() => {
+                    handleFilterChange(8);
+                    {colorButtonTextVar08 !== "text-orange-500"?(setColorButtonTextVar08("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level08" colorButtonText = {colorButtonTextVar08}
+                />
+                <Button text="Level 9" onClick={() => {
+                    handleFilterChange(9);
+                    {colorButtonTextVar09 !== "text-orange-500"?(setColorButtonTextVar09("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
+                    }} id = "level09" colorButtonText = {colorButtonTextVar09}
+                />
             </div>
 
             <div className="text-2xl p-2 text-orange-700" id="levelSpell">{filter !== "" && (<>Spells level {filter.split("=")[1]}</>)}</div>
@@ -100,5 +161,3 @@ function ConsultarTodasMagias() {
         </div>
     )
 }
-
-export default ConsultarTodasMagias;

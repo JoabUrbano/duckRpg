@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import Logo from '../../img/kawaii_duck_png_by_milosii_df87clj-pre.png';
+import Logo from '../../img/logo.png';
 
-function Sobre() {
+export default function Sobre() {
     return(
         <div className='min-h-screen bg-cor-bg p-6 text-2xl flex'>
             <div className="w-1/2 pt-32">
@@ -14,5 +14,3 @@ function Sobre() {
         </div>
     )
 }
-
-export default Sobre;

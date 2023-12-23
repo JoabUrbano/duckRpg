@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-function Home() {
+export default function Home() {
     return(
         <div className="min-h-screen bg-cor-bg p-4 flex flex-wrap">
             <div className="text-4xl pt-12 pl-8 w-1/2">
@@ -13,5 +13,3 @@ function Home() {
         </div>
     )
 }
-
-export default Home;

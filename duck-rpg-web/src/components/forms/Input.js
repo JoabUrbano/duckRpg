@@ -1,4 +1,4 @@
-function Input({type, text, name, placeholder, handleOnChange, value}) {
+export default function Input({type, text, name, placeholder, handleOnChange, value}) {
     return(
         <div className="pl-2 text-xl">
             {name && <label className="pr-2" htmlFor={name}>{text}:</label>}
@@ -13,5 +13,3 @@ function Input({type, text, name, placeholder, handleOnChange, value}) {
         </div>
     )
 }
-
-export default Input;

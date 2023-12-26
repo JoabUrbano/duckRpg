@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import imageHome from '../../img/logo.png';
-import { GiAxeSwing, GiCometSpark } from "react-icons/gi";
+import { GiAxeSwing, GiCometSpark, GiTrapMask, GiSteeltoeBoots, GiCharacter } from "react-icons/gi";
 import { LiaAngleDownSolid } from "react-icons/lia";
 
 export default function NavBar() {
@@ -35,15 +35,30 @@ export default function NavBar() {
           <LiaAngleDownSolid />
           {isDropdownOpen && (
             <div className="dropdown-content bg-cor-barra absolute left-0 top-full p-3">
+              <Link to="/buscarraces" className="text-white hover:text-orange-400 block py-2 flex">
+                <p className='pr-1'>Buscar Raças</p>
+                <GiCharacter />
+              </Link>
+
               <Link to="/buscarmagias" className="text-white hover:text-orange-400 block py-2 flex">
                 <p className='pr-1'>Buscar Magias</p>
                 <GiCometSpark />
               </Link>
+
               <Link to="/buscarclasses" className="text-white hover:text-orange-400 block py-2 flex">
                 <p className='pr-1'>Buscar Classes</p>
                 <GiAxeSwing />
               </Link>
-              
+
+              <Link to="/buscarequipaments" className="text-white hover:text-orange-400 block py-2 flex">
+                <p className='pr-1'>Buscar Equipamentos</p>
+                <GiSteeltoeBoots />
+              </Link>
+
+              <Link to="/buscarmonsters" className="text-white hover:text-orange-400 block py-2 flex">
+                <p className='pr-1'>Buscar Monstros</p>
+                <GiTrapMask />
+              </Link>
             </div>
           )}
         </li>

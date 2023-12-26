@@ -18,6 +18,12 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
+
+        <Route path="/buscarraces" element={<BuscarClasses />} />
+        <Route
+          path="/buscarraces/:raceSelected"
+          element={<ConsultarClasses />}
+        />
         <Route path="/buscarmagias" element={<BuscarMagias />} />
         <Route
           path="/buscarmagias/magia/:spellSelected"
@@ -25,9 +31,20 @@ function App() {
         />
         <Route path="/buscarclasses" element={<BuscarClasses />} />
         <Route
-          path="buscarclasse/:classSelected"
+          path="/buscarclasse/:classSelected"
           element={<ConsultarClasses />}
         />
+        <Route path="/buscarequipaments" element={<BuscarClasses />} />
+        <Route
+          path="/buscarequipaments/:equipamentSelected"
+          element={<ConsultarClasses />}
+        />
+        <Route path="/buscarmonsters" element={<BuscarClasses />} />
+        <Route
+          path="/buscarmonsters/:monsterSelected"
+          element={<ConsultarClasses />}
+        />
+
         <Route path="/sistemaxp" element={<SistemaXp />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/registro" element={<Registro />} />

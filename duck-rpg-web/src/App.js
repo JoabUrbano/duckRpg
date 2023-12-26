@@ -36,6 +36,11 @@ function App() {
           path="/buscarclasse/:classSelected"
           element={<ConsultarClasses />}
         />
+        <Route path="/buscarcaracteristicas" element={<BuscarClasses />} />
+        <Route
+          path="/buscarcaracteristicas/:featureSelected"
+          element={<ConsultarClasses />}
+        />
         <Route path="/buscarequipaments" element={<BuscarEquipamentos />} />
         <Route
           path="/buscarequipaments/:equipamentSelected"

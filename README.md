@@ -7,6 +7,7 @@ Essa aplicação tem como objetivo fazer consultas de itens do sistema de RPG D&
 - Consulta de todas as magias do livro básico listando-as e sendo possível abri-las clicando em seu nome<br>
 - Filtrar as listas de magias pelo nível<br>
 - Consulta das classes básicas do livro do jogador<br>
+- Consulta os equipamentos básicos do livro do jogador<br>
 
 <h3> ⚙️ Tecnologias utilizadas </h3>
 - React.js<br>

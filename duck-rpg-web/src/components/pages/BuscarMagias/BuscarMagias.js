@@ -97,53 +97,93 @@ export default function ConsultarTodasMagias() {
             <div className='flex items-center justify-center'>
                 <Button text="Level 0" onClick={() => {
                     handleFilterChange(0);
-                    {colorButtonTextVar00 !== "text-orange-500"?(setColorButtonTextVar00("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level00" colorButtonText = {colorButtonTextVar00}
+                    setColorButtonTextVar00(
+                    colorButtonTextVar00 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level00" colorButtonText = {colorButtonTextVar00}
                 />
                 <Button text="Level 1" onClick={() => {
                     handleFilterChange(1);
-                    {colorButtonTextVar01 !== "text-orange-500"?(setColorButtonTextVar01("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level01" colorButtonText = {colorButtonTextVar01}
+                    setColorButtonTextVar01(
+                    colorButtonTextVar02 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level01" colorButtonText = {colorButtonTextVar01}
                 />
                 <Button text="Level 2" onClick={() => {
                     handleFilterChange(2);
-                    {colorButtonTextVar02 !== "text-orange-500"?(setColorButtonTextVar02("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level02" colorButtonText = {colorButtonTextVar02}
+                    setColorButtonTextVar02(
+                    colorButtonTextVar02 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level02" colorButtonText = {colorButtonTextVar02}
                 />
                 <Button text="Level 3" onClick={() => {
                     handleFilterChange(3);
-                    {colorButtonTextVar03 !== "text-orange-500"?(setColorButtonTextVar03("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level03" colorButtonText = {colorButtonTextVar03}
+                    setColorButtonTextVar03(
+                    colorButtonTextVar03 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level03" colorButtonText = {colorButtonTextVar03}
                 />
                 <Button text="Level 4" onClick={() => {
                     handleFilterChange(4);
-                    {colorButtonTextVar04 !== "text-orange-500"?(setColorButtonTextVar04("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level04" colorButtonText = {colorButtonTextVar04}
+                    setColorButtonTextVar04(
+                    colorButtonTextVar04 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level04" colorButtonText = {colorButtonTextVar04}
                 />
                 <Button text="Level 5" onClick={() => {
                     handleFilterChange(5);
-                    {colorButtonTextVar05 !== "text-orange-500"?(setColorButtonTextVar05("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level05" colorButtonText = {colorButtonTextVar05}
+                    setColorButtonTextVar05(
+                    colorButtonTextVar05 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level05" colorButtonText = {colorButtonTextVar05}
                 />
                 <Button text="Level 6" onClick={() => {
                     handleFilterChange(6);
-                    {colorButtonTextVar06 !== "text-orange-500"?(setColorButtonTextVar06("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level06" colorButtonText = {colorButtonTextVar06}
+                    setColorButtonTextVar06(
+                    colorButtonTextVar06 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level06" colorButtonText = {colorButtonTextVar06}
                 />
                 <Button text="Level 7" onClick={() => {
                     handleFilterChange(7);
-                    {colorButtonTextVar07 !== "text-orange-500"?(setColorButtonTextVar07("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level07" colorButtonText = {colorButtonTextVar07}
+                    setColorButtonTextVar07(
+                    colorButtonTextVar07 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level07" colorButtonText = {colorButtonTextVar07}
                 />
                 <Button text="Level 8" onClick={() => {
                     handleFilterChange(8);
-                    {colorButtonTextVar08 !== "text-orange-500"?(setColorButtonTextVar08("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level08" colorButtonText = {colorButtonTextVar08}
+                    setColorButtonTextVar08(
+                    colorButtonTextVar08 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level08" colorButtonText = {colorButtonTextVar08}
                 />
                 <Button text="Level 9" onClick={() => {
                     handleFilterChange(9);
-                    {colorButtonTextVar09 !== "text-orange-500"?(setColorButtonTextVar09("text-orange-500")) : (setColorButtonTextVar00("text-gray-200"))};
-                    }} id = "level09" colorButtonText = {colorButtonTextVar09}
+                    setColorButtonTextVar09(
+                    colorButtonTextVar09 !== "text-orange-500"
+                        ? "text-orange-500"
+                        : "text-gray-200"
+                    );
+                }} id = "level09" colorButtonText = {colorButtonTextVar09}
                 />
             </div>
 

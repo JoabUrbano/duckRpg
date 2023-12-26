@@ -18,8 +18,7 @@ export default function ConsultarMagia() {
             setRemoveLoading(true);
           })
           .catch(error => console.error(error));
-          // eslint-disable-next-line
-    }, []);
+    }, [spellSelected]);
 
     return(
         <div className='min-h-screen bg-cor-bg p-4'>

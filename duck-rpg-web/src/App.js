@@ -11,6 +11,8 @@ import ConsultarClasses from "./components/pages/BuscarClasses/ConsultarClasses"
 import SistemaXp from "./components/pages/SistemaXp.js";
 import Registro from "./components/pages/Registro.js";
 import Login from "./components/pages/Login.js";
+import BuscarEquipamentos from "./components/pages/BuscarEquipamentos/BuscarEquipamentos.js";
+import ConsultarEquipamento from "./components/pages/BuscarEquipamentos/ConsultarEquipamento.js";
 
 function App() {
   return (
@@ -34,10 +36,10 @@ function App() {
           path="/buscarclasse/:classSelected"
           element={<ConsultarClasses />}
         />
-        <Route path="/buscarequipaments" element={<BuscarClasses />} />
+        <Route path="/buscarequipaments" element={<BuscarEquipamentos />} />
         <Route
           path="/buscarequipaments/:equipamentSelected"
-          element={<ConsultarClasses />}
+          element={<ConsultarEquipamento />}
         />
         <Route path="/buscarmonsters" element={<BuscarClasses />} />
         <Route

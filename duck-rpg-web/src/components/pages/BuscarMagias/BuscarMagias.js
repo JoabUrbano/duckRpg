@@ -151,11 +151,10 @@ export default function ConsultarTodasMagias() {
 
             <ul>
                 {spells && spells.results.map((item) => (
-                            <li className='text-xl border-b-2 pb-1 pl-1 border-slate-600' key={item.name}>
-                                <Link className='hover:text-orange-500' to ={`/buscarmagias/magia/${item.index}`} >{item.name}</Link>
-
-                            </li>
-                        ))}
+                    <li className='text-xl border-b-2 pb-1 pl-1 border-slate-600' key={item.name}>
+                        <Link className='hover:text-orange-500' to ={`/buscarmagias/magia/${item.index}`} >{item.name}</Link>
+                    </li>
+                ))}
                 {!removeLoading && <Loading />}
             </ul>
         </div>

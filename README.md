@@ -7,8 +7,8 @@ Essa aplicação tem como objetivo fazer consultas de itens do sistema de RPG D&
 - Consulta de magias através da busca pelo nome<br>
 - Filtrar as listas de magias pelo nível<br>
 - Consulta das classes básicas do livro do jogador<br>
-- Consulta tidos os equipamentos básicos do livro do jogador<br>
-- Consulta de equipamentos através da busca pelo nome<br>
+- Consulta tidos os equipamentos e itens mágicos básicos do livro do jogador<br>
+- Consulta de equipamentos e itens mágicos através da busca pelo nome<br>
 
 <h3> ⚙️ Tecnologias utilizadas </h3>
 - React.js<br>

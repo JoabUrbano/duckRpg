@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import Loading from '../../layout/Loading.js';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Input from "../../forms/Input.js";
 import Button from "../../forms/Button.js";
 
 export default function BuscarEquipamentos() {
 
     const navigate = useNavigate();
+    const { type } = useParams();
 
     // eslint-disable-next-line
     const [data, setData] = useState(null);
@@ -17,7 +18,7 @@ export default function BuscarEquipamentos() {
     const substituteCharacter = "-";
 
     useEffect(() => {
-        fetch(`https://www.dnd5eapi.co/api/equipment`)
+        fetch(`https://www.dnd5eapi.co/api/${type}`)
         .then(response => response.json())
         .then(equipaments => {
             setEquipaments(equipaments);
@@ -29,12 +30,12 @@ export default function BuscarEquipamentos() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newName = name.trim().split(" ").join(substituteCharacter);
-        fetch(`https://www.dnd5eapi.co/api/equipment/${newName.toLowerCase()}`)
+        fetch(`https://www.dnd5eapi.co/api/${type}/${newName.toLowerCase()}`)
         .then(response => response.json())
         .then(data => {
             setData(data);
             if(data.index !== undefined) {
-                navigate(`/buscarequipamentos/${data.index}`);
+                navigate(`/buscarequipamentos/${type}/${data.index}`);
             }
             else {
                 const divWarning = document.getElementById("warning");
@@ -52,7 +53,7 @@ export default function BuscarEquipamentos() {
                             <Input type="text"
                             text="Buscar equipamento"
                             name="buscarEquipamento"
-                            placeholder="Digite o nome do equipamento"
+                            placeholder="Nome do equipamento"
                             handleOnChange={(e) => setName(e.target.value)}
                             value={name}
                             />
@@ -65,9 +66,9 @@ export default function BuscarEquipamentos() {
                     </form>
             </div>
             <ul className="p-2">
-                {equipaments && equipaments.results.map((equipament) => (
+                {equipaments && equipaments.results && equipaments.results.map((equipament) => (
                     <li className='text-xl border-b-2 pb-1 pl-1 border-slate-600' key={equipament.name}>
-                        <Link className="hover:text-orange-500" to={`/buscarequipamentos/${equipament.index}`}>{equipament.name}</Link>
+                        <Link className="hover:text-orange-500" to={`/buscarequipamentos/${type}/${equipament.index}`}>{equipament.name}</Link>
                     </li>
                 ))}
             </ul>

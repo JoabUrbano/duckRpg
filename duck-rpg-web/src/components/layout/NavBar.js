@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import imageHome from '../../img/logo.png';
-import { GiAxeSwing, GiCometSpark, GiTrapMask, GiSteeltoeBoots, GiCharacter, GiBackup } from "react-icons/gi";
+import { GiAxeSwing, GiCometSpark, GiTrapMask, GiSteeltoeBoots, GiCharacter, GiBackup, GiBoltShield } from "react-icons/gi";
 import { LiaAngleDownSolid } from "react-icons/lia";
 
 export default function NavBar() {
@@ -55,9 +55,13 @@ export default function NavBar() {
                 <GiBackup />
               </Link>
 
-              <Link to="/buscarequipamentos" className="text-white hover:text-orange-400 block py-2 flex">
+              <Link to={`/buscarequipamentos/${"equipment"}`} className="text-white hover:text-orange-400 block py-2 flex">
                 <p className='pr-1'>Buscar Equipamentos</p>
                 <GiSteeltoeBoots />
+              </Link>
+              <Link to={`/buscarequipamentos/${"magic-items"}`} className="text-white hover:text-orange-400 block py-2 flex">
+                <p className='pr-1'>Buscar Itens Mágicos</p>
+                <GiBoltShield />
               </Link>
 
               <Link to="/buscarmonstros" className="text-white hover:text-orange-400 block py-2 flex">

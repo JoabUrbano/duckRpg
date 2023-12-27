@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../../layout/Loading";
 import ConsultarTabelaClasses from "./ConsultarTabelaClasses";
+import BackArrow from "../../../img/back_arrow.webp"
+import { Link } from 'react-router-dom';
 
 export default function ConsultarClasses() {
   const { classSelected } = useParams();
@@ -23,6 +25,7 @@ export default function ConsultarClasses() {
 
   return (
     <div className="min-h-screen bg-cor-bg p-4">
+      <Link to="/buscarclasses"><img className='h-10' src={BackArrow} alt="BackArrow" /></Link>
       {classRpg && (
         <ul>
           <li className="text-orange-800 text-4xl pl-1">{classRpg.name}</li>

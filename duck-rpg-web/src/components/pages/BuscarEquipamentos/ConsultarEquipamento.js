@@ -8,30 +8,43 @@ export default function ConsultarEquipamento() {
 
     const [removeLoading, setRemoveLoading] = useState(false);
     const [equipament, setEquipament] = useState(null);
+    const { type } = useParams();
     const { equipamentSelected } = useParams();
 
     useEffect(() => {
-        fetch(`https://www.dnd5eapi.co/api/equipment/${equipamentSelected}`)
+        fetch(`https://www.dnd5eapi.co/api/${type}/${equipamentSelected}`)
         .then(response => response.json())
         .then(equipament => {
             setEquipament(equipament);
             setRemoveLoading(true);
         })
         .catch(error => console.log(error))
-    }, [equipamentSelected]);
+    }, [type, equipamentSelected]);
 
     return(
         <div className='min-h-screen bg-cor-bg p-4'>
-            <Link to="/buscarequipamentos"><img className='h-10' src={BackArrow} alt="BackArrow" /></Link>
+            <Link to={`/buscarequipamentos/${type}`}><img className='h-10' src={BackArrow} alt="BackArrow" /></Link>
             {equipament && (
                 <ul>
                     <li className='text-orange-800 text-4xl pl-1 pb-2'>{equipament.name}</li>
-                    <li className='text-2xl pb-1'>{equipament.equipment_category.name}</li>
+                    <li className='text-2xl pb-1'>
+                        {equipament.equipment_category && equipament.equipment_category.name ? (
+                            <>{equipament.equipment_category.name}</>
+                        ):<></>}
+                    </li>
 
                     <li className='text-lg'>
                     {equipament.gear_category && equipament.gear_category.name ? (
                         <>
                             {equipament.gear_category.name}
+                        </> 
+                    ) : (<></>)}
+                    </li>
+
+                    <li className='text-lg'>
+                    {equipament.rarity && equipament.rarity.name ? (
+                        <>
+                            Rarity: {equipament.rarity.name}
                         </> 
                     ) : (<></>)}
                     </li>
@@ -98,7 +111,7 @@ export default function ConsultarEquipamento() {
                         </>
                     ):(<></>)}</li>
 
-                    <li className='text-lg'>{equipament.cost.quantity > 0 &&(
+                    <li className='text-lg'>{equipament.cost && equipament.cost.quantity > 0 &&(
                         <>Cost: {equipament.cost.quantity} {equipament.cost.unit}</>
                     )}
                     </li>

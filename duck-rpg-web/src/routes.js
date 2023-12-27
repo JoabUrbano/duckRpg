@@ -47,11 +47,13 @@ export default function AppRoutes() {
                 path="/buscarcaracteristicas/:featureSelected"
                 element={<ConsultarCaracteristicas />}
                 />
-                <Route path="/buscarequipamentos" element={<BuscarEquipamentos />} />
+
+                <Route path="/buscarequipamentos/:type" element={<BuscarEquipamentos />} />
                 <Route
-                path="/buscarequipamentos/:equipamentSelected"
+                path="/buscarequipamentos/:type/:equipamentSelected"
                 element={<ConsultarEquipamento />}
                 />
+
                 <Route path="/buscarmonstros" element={<BuscarMonstros />} />
                 <Route
                 path="/buscarmonstros/:monsterSelected"

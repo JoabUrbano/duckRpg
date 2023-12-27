@@ -107,7 +107,7 @@ export default function ConsultarTodasMagias() {
                 <Button text="Level 1" onClick={() => {
                     handleFilterChange(1);
                     setColorButtonTextVar01(
-                    colorButtonTextVar02 !== "text-orange-500"
+                    colorButtonTextVar01 !== "text-orange-500"
                         ? "text-orange-500"
                         : "text-gray-200"
                     );

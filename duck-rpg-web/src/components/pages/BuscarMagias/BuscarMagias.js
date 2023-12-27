@@ -39,13 +39,13 @@ export default function ConsultarTodasMagias() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const newName = name.split(' ').join(substituteCharacter);
+        const newName = name.trim().split(' ').join(substituteCharacter);
         fetch(`https://www.dnd5eapi.co/api/spells/${newName.toLowerCase()}`)
           .then(response => response.json())
           .then(data => {
             setData(data);
             if(data.index !== undefined) {
-                navigate(`/buscarmagias/magia/${data.index}`);
+                navigate(`/buscarmagias/${data.index}`);
             }
             else {
                 const divWarning = document.getElementById("warning");
@@ -192,7 +192,7 @@ export default function ConsultarTodasMagias() {
             <ul>
                 {spells && spells.results.map((item) => (
                     <li className='text-xl border-b-2 pb-1 pl-1 border-slate-600' key={item.name}>
-                        <Link className='hover:text-orange-500' to ={`/buscarmagias/magia/${item.index}`} >{item.name}</Link>
+                        <Link className='hover:text-orange-500' to ={`/buscarmagias/${item.index}`} >{item.name}</Link>
                     </li>
                 ))}
                 {!removeLoading && <Loading />}

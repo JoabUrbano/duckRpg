@@ -27,14 +27,14 @@ export default function AppRoutes() {
             <Routes>
                 <Route exact path="/" element={<Home />} />
 
-                <Route path="/buscarraces" element={<BuscarRacas />} />
+                <Route path="/buscarracas" element={<BuscarRacas />} />
                 <Route
-                path="/buscarraces/:raceSelected"
+                path="/buscarracas/:raceSelected"
                 element={<ConsultarRacas />}
                 />
                 <Route path="/buscarmagias" element={<BuscarMagias />} />
                 <Route
-                path="/buscarmagias/magia/:spellSelected"
+                path="/buscarmagias/:spellSelected"
                 element={<ConsultarMagia />}
                 />
                 <Route path="/buscarclasses" element={<BuscarClasses />} />
@@ -47,14 +47,14 @@ export default function AppRoutes() {
                 path="/buscarcaracteristicas/:featureSelected"
                 element={<ConsultarCaracteristicas />}
                 />
-                <Route path="/buscarequipaments" element={<BuscarEquipamentos />} />
+                <Route path="/buscarequipamentos" element={<BuscarEquipamentos />} />
                 <Route
-                path="/buscarequipaments/:equipamentSelected"
+                path="/buscarequipamentos/:equipamentSelected"
                 element={<ConsultarEquipamento />}
                 />
-                <Route path="/buscarmonsters" element={<BuscarMonstros />} />
+                <Route path="/buscarmonstros" element={<BuscarMonstros />} />
                 <Route
-                path="/buscarmonsters/:monsterSelected"
+                path="/buscarmonstros/:monsterSelected"
                 element={<ConsultarMonstros />}
                 />
 

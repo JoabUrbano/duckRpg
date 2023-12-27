@@ -35,7 +35,7 @@ export default function NavBar() {
           <LiaAngleDownSolid />
           {isDropdownOpen && (
             <div className="dropdown-content bg-cor-barra absolute left-0 top-full p-3">
-              <Link to="/buscarraces" className="text-white hover:text-orange-400 block py-2 flex">
+              <Link to="/buscarracas" className="text-white hover:text-orange-400 block py-2 flex">
                 <p className='pr-1'>Buscar Raças</p>
                 <GiCharacter />
               </Link>
@@ -55,12 +55,12 @@ export default function NavBar() {
                 <GiBackup />
               </Link>
 
-              <Link to="/buscarequipaments" className="text-white hover:text-orange-400 block py-2 flex">
+              <Link to="/buscarequipamentos" className="text-white hover:text-orange-400 block py-2 flex">
                 <p className='pr-1'>Buscar Equipamentos</p>
                 <GiSteeltoeBoots />
               </Link>
 
-              <Link to="/buscarmonsters" className="text-white hover:text-orange-400 block py-2 flex">
+              <Link to="/buscarmonstros" className="text-white hover:text-orange-400 block py-2 flex">
                 <p className='pr-1'>Buscar Monstros</p>
                 <GiTrapMask />
               </Link>

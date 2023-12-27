@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loading from '../../layout/Loading.js';
+import BackArrow from "../../../img/back_arrow.webp"
+import { Link } from 'react-router-dom';
 
 export default function ConsultarEquipamento() {
 
@@ -20,6 +22,7 @@ export default function ConsultarEquipamento() {
 
     return(
         <div className='min-h-screen bg-cor-bg p-4'>
+            <Link to="/buscarequipamentos"><img className='h-10' src={BackArrow} alt="BackArrow" /></Link>
             {equipament && (
                 <ul>
                     <li className='text-orange-800 text-4xl pl-1 pb-2'>{equipament.name}</li>

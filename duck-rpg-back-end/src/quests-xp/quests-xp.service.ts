@@ -24,7 +24,7 @@ export class QuestsXpService {
     return 1;
   }
 
-  async update(updateQuestXpDto: UpdateQuestXpDto) {
+  async update(updateQuestXpDto: UpdateQuestXpDto, id: number) {
     return 1;
   }
 

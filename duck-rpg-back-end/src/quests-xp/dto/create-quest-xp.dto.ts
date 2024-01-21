@@ -4,9 +4,12 @@ export class CreateQuestXpDto {
     @IsString()
     readonly name: string;
 
+    @IsString()
+    readonly description: string;
+
     @IsNumber()
     readonly points: number;
 
     @IsBoolean()
-    readonly IsFixed: boolean;
+    readonly isFixed: boolean;
 }

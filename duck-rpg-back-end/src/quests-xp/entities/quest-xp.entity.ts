@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGemeratedColumn, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class QuestXp {
@@ -7,6 +7,9 @@ export class QuestXp {
 
     @Column()
     name: string;
+
+    @Column()
+    description: string;
 
     @Column()
     points: number;

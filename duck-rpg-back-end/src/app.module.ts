@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { QuestsXpModule } from './quests-xp/quests-xp.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+require('dotenv').config();
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -11,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: '@%20Pato23%@',
+      password: process.env.SENHA_BD,
       database: 'db_courses',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true, // Usar apenas em ambiente de desenvolvimento, para criar automaticamente as tabelas no banco de dados.

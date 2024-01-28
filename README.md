@@ -11,13 +11,20 @@ Essa aplicação tem como objetivo fazer consultas de itens do sistema de RPG D&
 - Consulta de equipamentos e itens mágicos através da busca pelo nome<br>
 
 <h3> ⚙️ Tecnologias utilizadas </h3>
-- React.js<br>
+- React.js para front-end<br>
 - Tailwind CSS<br>
+- Nest.js para back-end<br>
 
-<h3 id="usage" > 📚 Bibliotecas utilizadas </h3>
+<h3 id="usage" > 📚 Bibliotecas e recursos utilizados </h3>
+<h4>Front End</h4>
 - react-router-dom<br>
 - react-icons<br>
 - spinners-react<br>
+<br>
+<h4>Back End</h4>
+- Typeorm mysql2
+- Class Validator
+- Mapped Types
 
 <br>Autor<br>
 <a href="https://github.com/JoabUrbano">Joab Urbano</a><br>

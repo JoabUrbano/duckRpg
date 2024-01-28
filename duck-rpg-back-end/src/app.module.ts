@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { QuestsXpModule } from './quests-xp/quests-xp.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UserModule } from './user/user.module';
 
 require('dotenv').config();
 
@@ -20,6 +21,7 @@ require('dotenv').config();
       logging: true,
     }),
     QuestsXpModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],

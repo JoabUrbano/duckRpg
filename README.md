@@ -15,16 +15,48 @@ Essa aplicação tem como objetivo fazer consultas de itens do sistema de RPG D&
 - Tailwind CSS<br>
 - Nest.js para back-end<br>
 
+<h3> 📝 Como rodar o projeto </h3>
+
+```bash
+# clonar repositório
+git clone https://github.com/JoabUrbano/duckRpg.git
+
+# entrar na pasta do projeto front end web
+cd duck-rpg-back-end\
+
+# instalar depedências do backend
+npm i
+
+cd ..
+
+cd duck-rpg-web\
+
+# instalar depedências do frontend
+npm i
+cd ..
+
+# Antes de rodar o projeto verifique as variaveis de ambiente no diretorio duck-rpg-back-end conforme mostrado no exemplo
+
+# rodar back-end
+cd duck-rpg-back-end\
+npm run start:dev
+
+# rodar front-end
+cd duck-rpg-web\
+npm start dev
+```
+
 <h3 id="usage" > 📚 Bibliotecas e recursos utilizados </h3>
 <h4>Front End</h4>
 - react-router-dom<br>
 - react-icons<br>
 - spinners-react<br>
 <br>
+
 <h4>Back End</h4>
-- Typeorm mysql2
-- Class Validator
-- Mapped Types
+- Typeorm mysql2<br>
+- Class Validator<br>
+- Mapped Types<br>
 
 <br>Autor<br>
 <a href="https://github.com/JoabUrbano">Joab Urbano</a><br>

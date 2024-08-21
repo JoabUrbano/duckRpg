@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../../layout/Loading";
-import ConsultarTabelaClasses from "./ConsultarTabelaClasses";
+import TableClass from "./TableClass";
 import BackArrow from "../../../img/back_arrow.webp"
 import { Link } from 'react-router-dom';
 
-export default function ConsultarClasses() {
+export default function ShowClass() {
   const { classSelected } = useParams();
   const [classRpg, setClassRpg] = useState(null);
   const [removeLoading, setRemoveLoading] = useState(false);
@@ -33,7 +33,6 @@ export default function ConsultarClasses() {
           <li className="text-2xl">Class Features</li>
 
           <li>
-            <p>Hit points</p>
             <p>Hit Dice: 1d{classRpg.hit_die}</p>
             <p>
               Hit points at 1st level: {classRpg.hit_die} + Constitution
@@ -42,7 +41,7 @@ export default function ConsultarClasses() {
             <p>
               Hit points at higher levels: 1d{classRpg.hit_die}{" "}
               {`(or ${classRpg.hit_die / 2 + 1})`} + Constitution modifier per{" "}
-              {classRpg.name}{" "}
+              {classRpg.name}{" "} level
             </p>
           </li>
 
@@ -71,7 +70,7 @@ export default function ConsultarClasses() {
           </li>
 
           <li className="pt-4">
-            <ConsultarTabelaClasses classSelected={classSelected} />
+            <TableClass classSelected={classSelected} />
           </li>
         </ul>
       )}

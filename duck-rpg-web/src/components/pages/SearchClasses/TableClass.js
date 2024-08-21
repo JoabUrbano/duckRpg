@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Loading from "../../layout/Loading";
 
-export default function ConsultarTabelaClasses({ classSelected }) {
+export default function TableClass({ classSelected }) {
   const [featuresClass, setFeaturesClass] = useState([0]);
   const [removeLoading, setRemoveLoading] = useState(false);
   const featuresClassList = [];

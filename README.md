@@ -1,30 +1,57 @@
 <h1>Duck RPG</h1>
-<h2>💻 Descrição</h2>
-Essa aplicação tem como objetivo fazer consultas de itens do sistema de RPG D&D 5º edição, e par isso é utilizada a <a href="https://www.dnd5eapi.co/">D&D 5e API</a>. A aplicação conta com as consulta dos principais itens do RPG como classes e magias. No futuro será implementado uma API propria para fazer consultas de sistemas proprios de evolução bem como possibilitar a interação e salvamento de dados proprios na aplicação.
+<h2>💻 About the Project</h2>
+This application aims to query elements such as items, races and classes of the D&D 5th edition RPG system using the <a href="https://www.dnd5eapi.co/">D&D 5e API</a>.
 
-<h3> 📋 Features </h3>
-- Consulta de todas as magias do livro básico<br>
-- Consulta de magias através da busca pelo nome<br>
-- Filtrar as listas de magias pelo nível<br>
-- Consulta das classes básicas do livro do jogador<br>
-- Consulta tidos os equipamentos e itens mágicos básicos do livro do jogador<br>
-- Consulta de equipamentos e itens mágicos através da busca pelo nome<br>
+## 📋 Features
+- Query spells<br>
+- Query classes<br>
+- Query items<br>
 
-<h3> ⚙️ Tecnologias utilizadas </h3>
-- React.js para front-end<br>
+## ⚙️ Technologies Used
+## Frontend
+- React.js<br>
 - Tailwind CSS<br>
-- Nest.js para back-end<br>
+## Backend
+- Nest.js<br>
+- MySQL
 
-<h3 id="usage" > 📚 Bibliotecas e recursos utilizados </h3>
-<h4>Front End</h4>
+## 📚 Libraries used
+## Front End
 - react-router-dom<br>
 - react-icons<br>
 - spinners-react<br>
 <br>
-<h4>Back End</h4>
+## Back End
 - Typeorm mysql2
 - Class Validator
 - Mapped Types
+
+## 🚀 Running the Project
+Prerequisites: npm / yarn and Docker installed
+
+```bash
+# clone the repository
+git clone https://github.com/JoabUrbano/duckRpg.git
+
+# navigate to the project directory
+cd duckRpg
+
+# install backend dependencies
+cd duck-rpg-back-end/
+
+npm i
+
+
+
+# install frontend dependencies
+cd ../
+
+cd duck-rpg-web/
+
+npm install react-icons
+
+npm i
+```
 
 <br>Autor<br>
 <a href="https://github.com/JoabUrbano">Joab Urbano</a><br>

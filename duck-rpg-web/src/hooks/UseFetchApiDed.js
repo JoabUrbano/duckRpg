@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export function UseFetchApiDed(pathRequestApiDed) {
-    const [classRpg, setClassRpg] = useState(null);
+export function UseFetchApiDed(pathRequestApiDed, setData) {
+    const [dataDed, setDataDed] = useState(setData);
     const [error, setError] = useState(null);
     const [removeLoading, setRemoveLoading] = useState(false);
 
@@ -9,11 +9,11 @@ export function UseFetchApiDed(pathRequestApiDed) {
         fetch(pathRequestApiDed)
           .then((response) => response.json())
           .then((data) => {
-            setClassRpg(data);
+            setDataDed(data);
             setRemoveLoading(true);
           })
           .catch((error) => setError(error))
     }, [pathRequestApiDed]);
 
-    return {classRpg, removeLoading, error};
+    return {dataDed, removeLoading, error};
 }

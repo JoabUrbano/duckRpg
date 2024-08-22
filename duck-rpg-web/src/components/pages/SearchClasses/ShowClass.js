@@ -1,27 +1,17 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../../layout/Loading";
 import TableClass from "./TableClass";
 import BackArrow from "../../../img/back_arrow.webp"
 import { Link } from 'react-router-dom';
+import { UseFetchApiDed } from "../../../hooks/UseFetchApiDed";
 
 export default function ShowClass() {
   const { classSelected } = useParams();
-  const [classRpg, setClassRpg] = useState(null);
-  const [removeLoading, setRemoveLoading] = useState(false);
-
-  useEffect(() => {
-    fetch(`https://www.dnd5eapi.co/api/classes/${classSelected}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setClassRpg(data);
-        setRemoveLoading(true);
-      })
-      .catch((error) => {
-        console.log(error);
-        setRemoveLoading(true);
-      });
-  }, [classSelected]);
+  const {classRpg, removeLoading, error} = UseFetchApiDed(`https://www.dnd5eapi.co/api/classes/${classSelected}`);
+  
+  if(error) {
+    return <div>Error loading class data.</div>;
+  }
 
   return (
     <div className="min-h-screen bg-cor-bg p-4">

@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Input from "../../forms/Input.js";
 import Button from "../../forms/Button.js";
 
-export default function BuscarEquipamentos() {
+export default function PageEquipment() {
 
     const navigate = useNavigate();
     const { type } = useParams();

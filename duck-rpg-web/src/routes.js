@@ -10,14 +10,14 @@ import ShowClass from "./components/pages/SearchClasses/ShowClass.js";
 import SistemaXp from "./components/pages/SistemaXp.js";
 import Registro from "./components/pages/Registro.js";
 import Login from "./components/pages/Login.js";
-import BuscarEquipamentos from "./components/pages/BuscarEquipamentos/BuscarEquipamentos.js";
-import ConsultarEquipamento from "./components/pages/BuscarEquipamentos/ConsultarEquipamento.js";
-import BuscarRacas from "./components/pages/BuscarRacas/BuscarRacas.js";
-import ConsultarRacas from "./components/pages/BuscarRacas/ConsultarRacas.js";
-import BuscarMonstros from "./components/pages/BuscarMonstros/BuscarMonstros.js";
-import ConsultarMonstros from "./components/pages/BuscarMonstros/ConsultarMonstros.js";
-import BuscarCaracteristicas from "./components/pages/BuscarCaracteristicas/BuscarCaracteristicas.js";
-import ConsultarCaracteristicas from "./components/pages/BuscarCaracteristicas/ConsultarCaracteristicas.js";
+import PageEquipment from "./components/pages/SearchEquipments/PageEquipment.js";
+import ShowEquipment from "./components/pages/SearchEquipments/ShowEquipment.js";
+import BuscarRacas from "./components/pages/SearchRaces/BuscarRacas.js";
+import ConsultarRacas from "./components/pages/SearchRaces/ConsultarRacas.js";
+import BuscarMonstros from "./components/pages/SearchCreatures/BuscarMonstros.js";
+import ConsultarMonstros from "./components/pages/SearchCreatures/ConsultarMonstros.js";
+import BuscarCaracteristicas from "./components/pages/SearchFeats/BuscarCaracteristicas.js";
+import ConsultarCaracteristicas from "./components/pages/SearchFeats/ConsultarCaracteristicas.js";
 
 export default function AppRoutes() {
     return(
@@ -51,10 +51,10 @@ export default function AppRoutes() {
                 element={<ConsultarCaracteristicas />}
                 />
 
-                <Route path="/buscarequipamentos/:type" element={<BuscarEquipamentos />} />
+                <Route path="/buscarequipamentos/:type" element={<PageEquipment />} />
                 <Route
                 path="/buscarequipamentos/:type/:equipamentSelected"
-                element={<ConsultarEquipamento />}
+                element={<ShowEquipment />}
                 />
 
                 <Route path="/buscarmonstros" element={<BuscarMonstros />} />

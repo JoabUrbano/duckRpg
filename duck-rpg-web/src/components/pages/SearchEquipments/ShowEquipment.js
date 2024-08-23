@@ -4,7 +4,7 @@ import Loading from '../../layout/Loading.js';
 import BackArrow from "../../../img/back_arrow.webp"
 import { Link } from 'react-router-dom';
 
-export default function ConsultarEquipamento() {
+export default function ShowEquipment() {
 
     const [removeLoading, setRemoveLoading] = useState(false);
     const [equipament, setEquipament] = useState(null);

@@ -3,8 +3,8 @@ import NavBar from "./components/layout/NavBar.js";
 import Footer from "./components/layout/Footer.js";
 import Home from "./components/pages/Home.js";
 import Sobre from "./components/pages/Sobre.js";
-import BuscarMagias from "./components/pages/BuscarMagias/BuscarMagias.js";
-import ConsultarMagia from "./components/pages/BuscarMagias/ConsultarMagia.js";
+import PageSpell from "./components/pages/SearchSpells/PageSpell.js";
+import ShowSpell from "./components/pages/SearchSpells/ShowSpell.js";
 import PageClasses from "./components/pages/SearchClasses/PageClasses.js";
 import ShowClass from "./components/pages/SearchClasses/ShowClass.js";
 import SistemaXp from "./components/pages/SistemaXp.js";
@@ -32,16 +32,19 @@ export default function AppRoutes() {
                 path="/buscarracas/:raceSelected"
                 element={<ConsultarRacas />}
                 />
-                <Route path="/buscarmagias" element={<BuscarMagias />} />
+                
+                <Route path="/buscarmagias" element={<PageSpell />} />
                 <Route
                 path="/buscarmagias/:spellSelected"
-                element={<ConsultarMagia />}
+                element={<ShowSpell />}
                 />
+
                 <Route path="/buscarclasses" element={<PageClasses />} />
                 <Route
                 path="/buscarclasse/:classSelected"
                 element={<ShowClass />}
                 />
+
                 <Route path="/buscarcaracteristicas" element={<BuscarCaracteristicas />} />
                 <Route
                 path="/buscarcaracteristicas/:featureSelected"

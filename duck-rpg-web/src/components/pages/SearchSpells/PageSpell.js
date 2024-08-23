@@ -4,7 +4,7 @@ import Input from '../../forms/Input.js';
 import Button from '../../forms/Button.js'
 import Loading from '../../layout/Loading.js';
 
-export default function ConsultarTodasMagias() {
+export default function PageSpell() {
 
     const navigate = useNavigate();
     const substituteCharacter = "-";

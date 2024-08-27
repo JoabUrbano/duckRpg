@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Loading from '../../layout/Loading.js';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Input from "../../forms/Input.js";
 import Button from "../../forms/Button.js";
+import { UseFetchApiDed } from "../../../hooks/UseFetchApiDed.js";
 
 export default function PageEquipment() {
 
@@ -11,21 +12,18 @@ export default function PageEquipment() {
 
     // eslint-disable-next-line
     const [data, setData] = useState(null);
-    const [equipaments, setEquipaments] = useState(null);
-    const [removeLoading, setRevomeLoading] = useState(false);
     const [name, setName] = useState("");
 
-    const substituteCharacter = "-";
+    const { dataDed, removeLoading, error } = UseFetchApiDed(
+        `https://www.dnd5eapi.co/api/${type}`,
+        null
+    );
 
-    useEffect(() => {
-        fetch(`https://www.dnd5eapi.co/api/${type}`)
-        .then(response => response.json())
-        .then(equipaments => {
-            setEquipaments(equipaments);
-            setRevomeLoading(true);
-        })
-        .catch(error => console.log(error))
-    });
+    if (error) {
+        return <div>Error loading equipments data.</div>;
+    }
+
+    const substituteCharacter = "-";
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -66,7 +64,7 @@ export default function PageEquipment() {
                     </form>
             </div>
             <ul className="p-2">
-                {equipaments && equipaments.results && equipaments.results.map((equipament) => (
+                {dataDed && dataDed.results && dataDed.results.map((equipament) => (
                     <li className='text-xl border-b-2 pb-1 pl-1 border-slate-600' key={equipament.name}>
                         <Link className="hover:text-orange-500" to={`/buscarequipamentos/${type}/${equipament.index}`}>{equipament.name}</Link>
                     </li>

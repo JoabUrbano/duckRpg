@@ -13,7 +13,7 @@ export default function ShowSpell() {
     );
 
     if(error) {
-        return <div>Error loading class data.</div>;
+        return <div>Error loading spells data.</div>;
     }
 
     return(

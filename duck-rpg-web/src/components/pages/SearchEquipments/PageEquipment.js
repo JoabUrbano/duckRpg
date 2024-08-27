@@ -9,9 +9,6 @@ export default function PageEquipment() {
 
     const navigate = useNavigate();
     const { type } = useParams();
-
-    // eslint-disable-next-line
-    const [data, setData] = useState(null);
     const [name, setName] = useState("");
 
     const { dataDed, removeLoading, error } = UseFetchApiDed(
@@ -31,7 +28,6 @@ export default function PageEquipment() {
         fetch(`https://www.dnd5eapi.co/api/${type}/${newName.toLowerCase()}`)
         .then(response => response.json())
         .then(data => {
-            setData(data);
             if(data.index !== undefined) {
                 navigate(`/buscarequipamentos/${type}/${data.index}`);
             }

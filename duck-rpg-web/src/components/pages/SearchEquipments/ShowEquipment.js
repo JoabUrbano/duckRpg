@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom';
 import { UseFetchApiDed } from '../../../hooks/UseFetchApiDed.js';
 
 export default function ShowEquipment() {
-
     const { type } = useParams();
-    const { dataDedSelected } = useParams();
+    const { equipamentSelected } = useParams();
     const {dataDed, removeLoading, error} = UseFetchApiDed(
-        `https://www.dnd5eapi.co/api/${type}/${dataDedSelected}`,
+        `https://www.dnd5eapi.co/api/${type}/${equipamentSelected}`,
         null
     );
 
@@ -19,9 +18,9 @@ export default function ShowEquipment() {
 
     return(
         <div className='min-h-screen bg-cor-bg p-4'>
-            <Link to={`/buscardataDedos/${type}`}><img className='h-10' src={BackArrow} alt="BackArrow" /></Link>
-            {dataDed && (
-                <ul>
+              <Link to={`/buscarequipamentos/${type}`}><img className='h-10' src={BackArrow} alt="BackArrow" /></Link>
+              {dataDed && (
+                <ul>    
                     <li className='text-orange-800 text-4xl pl-1 pb-2'>{dataDed.name}</li>
                     <li className='text-2xl pb-1'>
                         {dataDed.equipment_category && dataDed.equipment_category.name ? (

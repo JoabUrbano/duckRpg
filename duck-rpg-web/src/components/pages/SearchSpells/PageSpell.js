@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Input from '../../forms/Input.js';
 import Button from '../../forms/Button.js'
 import Loading from '../../layout/Loading.js';
+import { UseFetchApiDed } from '../../../hooks/UseFetchApiDed.js';
 
 export default function PageSpell() {
 
     const navigate = useNavigate();
-    const substituteCharacter = "-";
 
     const [colorButtonTextVar00, setColorButtonTextVar00] = useState("text-gray-200");
     const [colorButtonTextVar01, setColorButtonTextVar01] = useState("text-gray-200");
@@ -20,30 +20,24 @@ export default function PageSpell() {
     const [colorButtonTextVar08, setColorButtonTextVar08] = useState("text-gray-200");
     const [colorButtonTextVar09, setColorButtonTextVar09] = useState("text-gray-200");
 
-    // eslint-disable-next-line
-    const [data, setData] = useState(null);
-    const [spells, setSpells] = useState(null);
     const [name, setName] = useState("");
-    const [removeLoading, setRevomeLoading] = useState(false);
     const [filter, setFilter] = useState("");
 
-    useEffect(() => {
-        fetch(`https://www.dnd5eapi.co/api/spells${filter}`)
-          .then(response => response.json())
-          .then(spells => {
-            setSpells(spells);
-            setRevomeLoading(true);
-          })
-          .catch(error => console.log(error))
-    }, [filter]);
+    const {dataDed, removeLoading, error} = UseFetchApiDed(
+        `https://www.dnd5eapi.co/api/spells${filter}`,
+        null
+    )
+
+    if (error) {
+        return <div>Error loading spells data.</div>
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const newName = name.trim().split(' ').join(substituteCharacter);
+        const newName = name.trim().split(' ').join("-");
         fetch(`https://www.dnd5eapi.co/api/spells/${newName.toLowerCase()}`)
           .then(response => response.json())
           .then(data => {
-            setData(data);
             if(data.index !== undefined) {
                 navigate(`/buscarmagias/${data.index}`);
             }
@@ -190,7 +184,7 @@ export default function PageSpell() {
             <div className="text-2xl p-2 text-orange-700" id="levelSpell">{filter !== "" && (<>Spells level {filter.split("=")[1]}</>)}</div>
 
             <ul>
-                {spells && spells.results.map((item) => (
+                {dataDed && dataDed.results.map((item) => (
                     <li className='text-xl border-b-2 pb-1 pl-1 border-slate-600' key={item.name}>
                         <Link className='hover:text-orange-500' to ={`/buscarmagias/${item.index}`} >{item.name}</Link>
                     </li>
